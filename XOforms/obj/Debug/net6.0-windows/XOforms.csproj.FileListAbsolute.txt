@@ -1,0 +1,17 @@
+C:\Users\mrcro\Desktop\XOforms\XOforms\bin\Debug\net6.0-windows\XOforms.exe
+C:\Users\mrcro\Desktop\XOforms\XOforms\bin\Debug\net6.0-windows\XOforms.deps.json
+C:\Users\mrcro\Desktop\XOforms\XOforms\bin\Debug\net6.0-windows\XOforms.runtimeconfig.json
+C:\Users\mrcro\Desktop\XOforms\XOforms\bin\Debug\net6.0-windows\XOforms.dll
+C:\Users\mrcro\Desktop\XOforms\XOforms\bin\Debug\net6.0-windows\XOforms.pdb
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.csproj.AssemblyReference.cache
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.Form1.resources
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.csproj.GenerateResource.cache
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.AssemblyInfoInputs.cache
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.AssemblyInfo.cs
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.csproj.CoreCompileInputs.cache
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.dll
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\refint\XOforms.dll
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.pdb
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\XOforms.genruntimeconfig.cache
+C:\Users\mrcro\Desktop\XOforms\XOforms\obj\Debug\net6.0-windows\ref\XOforms.dll
