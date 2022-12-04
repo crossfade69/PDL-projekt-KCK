@@ -25,7 +25,7 @@ namespace customforms
 
         private void editprofbutton_Click(object sender, EventArgs e)
         {
-            editprofileForm ed = new editprofileForm();
+            loginForm ed = new editprofileForm();
             ed.ShowDialog();
         }
     }

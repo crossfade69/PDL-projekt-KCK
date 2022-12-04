@@ -4,6 +4,15 @@
     <Compile Update="ButtonZ.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="editprofileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="inventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12,6 +21,12 @@
     </Compile>
     <Compile Update="Friends.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="regisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="settingsForm.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>
