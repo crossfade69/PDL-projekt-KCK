@@ -11,6 +11,8 @@ namespace customforms
 {
     public class User : Account
     {
+        public int id;
+        public string nick;
         public string name;
         public string surname;
         public bool inGame;
@@ -18,6 +20,14 @@ namespace customforms
         public List<int> ownedGameId;
         public List<int> ownedItemsId;
         public DateTime userSince;
+        public User(string nick,string name,string surname,DateTime userSince,int id)
+        {
+            this.nick = nick;
+            this.name = name;
+            this.surname = surname;
+            this.userSince = userSince;
+            this.id = id;
+        }
         public void PostReviews(Review review)
         {
 

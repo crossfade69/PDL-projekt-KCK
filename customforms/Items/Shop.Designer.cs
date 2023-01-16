@@ -85,6 +85,10 @@
             this.shopGamesListBox.Size = new System.Drawing.Size(1067, 256);
             this.shopGamesListBox.Sorted = true;
             this.shopGamesListBox.TabIndex = 19;
+            this.shopGamesListBox.SelectedIndexChanged += new System.EventHandler(this.shopGamesListBox_SelectedIndexChanged);
+            this.shopGamesListBox.SelectedValueChanged += new System.EventHandler(this.shopGamesListBox_SelectedValueChanged);
+            this.shopGamesListBox.DoubleClick += new System.EventHandler(this.shopGamesListBox_DoubleClick);
+            this.shopGamesListBox.Enter += new System.EventHandler(this.shopGamesListBox_Enter);
             // 
             // shopSearchBox
             // 

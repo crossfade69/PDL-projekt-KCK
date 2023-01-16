@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +17,9 @@ namespace customforms
         public loginForm()
         {
             InitializeComponent();
+            dataBase = DataBase.GetInstance();
         }
-         DataBase dataBase=DataBase.GetInstance();
+        DataBase dataBase;
         bool isTopPanelDragged = false;
         bool isLeftPanelDragged = false;
         bool isRightPanelDragged = false;
@@ -301,18 +302,29 @@ namespace customforms
             string password = passwordtextBox.Text;
             SqlConnection connection=DataBase.GetConnection();
             string sql = "SELECT * FROM Accounts WHERE login = @login AND password=@password ";
-            using SqlCommand command = new SqlCommand(sql, connection);
+             SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@login", username);
             command.Parameters.AddWithValue("@password", password);
 
 
-            using (SqlDataReader reader = command.ExecuteReader())
-            {
+            SqlDataReader reader = command.ExecuteReader();
+            
                 if (reader.Read())
                 {
-                    // Login successful
-                    IsLogged = true;
-                    this.Close();
+                int userId = (int)reader[0];
+                reader.Close();
+                // Login successful
+                IsLogged = true;
+                     sql = "SELECT * FROM [dbo].[User] WHERE id=@id";
+                     command = new SqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("@id",userId );
+                reader = command.ExecuteReader();
+                        reader.Read();
+                MessageBox.Show((string)reader[0]);
+                reader.Close();
+
+
+                this.Close();
                 }
                 else
                 {
@@ -321,7 +333,7 @@ namespace customforms
                     profiletextBox.Clear();
                     passwordtextBox.Clear();
                 }
-            }
+            
         }  
     }
 }

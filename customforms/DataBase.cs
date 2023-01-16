@@ -12,6 +12,7 @@ namespace customforms
     public class DataBase
     {
         private List<Game> games;
+        private  User currentUser;
         private static SqlConnection connection;
         private string connectionString = "Server=tcp:pdl.database.windows.net,1433;" +
                "Initial Catalog=PDL;Persist Security Info=False;" +
@@ -41,11 +42,19 @@ namespace customforms
                 {
                     games.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
                 }
+                reader.Close();
 
             }
 
             return games;
         }
+        public void LogOut()
+        {
+            currentUser = null;
+        }
+        public void LogIn(User u) { currentUser = u; }
+
+
 
 
     }

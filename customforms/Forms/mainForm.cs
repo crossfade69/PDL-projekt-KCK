@@ -16,6 +16,7 @@ namespace customforms
         public mainForm()
         {
             InitializeComponent();
+            OpenSegment(games);
         }
         public void OpenSegment(UserControl u)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using customforms.DataDB;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,12 @@ namespace customforms
         public Shop()
         {
             InitializeComponent();
-            dataBase=DataBase.GetInstance();
+            dataBase = DataBase.GetInstance();
         }
         private void Shop_Load(object sender, EventArgs e)
         {
             shopGamesListBox.DataSource = GetData();
-            shopGamesListBox.DisplayMember = "Game";
+            shopGamesListBox.DisplayMember = "title";
         }
         private DataTable dtGames;
         private DataBase dataBase;
@@ -32,14 +33,41 @@ namespace customforms
         private DataTable GetData()
         {
 
+            dtGames = new DataTable();
+            List<Game> games = dataBase.GetAllGames();
+            dtGames.Columns.Add("title", typeof(string));
+
+            foreach (Game game in games)
+            {
+                dtGames.Rows.Add(game.title);
+            }
+
             return dtGames;
         }
         private void shopsearchBox_TextChanged(object sender, EventArgs e)
         {
             DataView dvGames = dtGames.DefaultView;
-            dvGames.RowFilter = "Game LIKE '%" + shopSearchBox.Text + "%'";
+            dvGames.RowFilter = "title LIKE '%" + shopSearchBox.Text + "%'";
         }
 
+        private void shopGamesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("b");
+        }
 
+        private void shopGamesListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("a");
+        }
+
+        private void shopGamesListBox_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void shopGamesListBox_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show(shopGamesListBox.SelectedIndex.ToString());
+        }
     }
 }
