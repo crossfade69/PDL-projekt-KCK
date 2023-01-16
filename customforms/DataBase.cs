@@ -32,22 +32,19 @@ namespace customforms
         {
             if(games==null)
             {
-                RefreshGames();
+                games = new List<Game>();
+                string sql = "SELECT * FROM Game ";
+                using SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    games.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
+                }
+
             }
 
             return games;
-        }
-        public void RefreshGames()
-        {
-            games = new List<Game>();
-            string sql = "SELECT * FROM Game ";
-            using SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                games.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
-            }
         }
 
 
