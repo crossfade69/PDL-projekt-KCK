@@ -4,25 +4,25 @@
     <Compile Update="ButtonZ.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="editprofileForm.cs">
+    <Compile Update="Forms\editprofileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="inventoryForm.cs">
+    <Compile Update="Forms\inventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="loginForm.cs">
+    <Compile Update="Forms\loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="mainForm.cs">
+    <Compile Update="Forms\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MinMaxButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Friends.cs">
+    <Compile Update="Forms\Items\Friends.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="settingsForm.cs">
+    <Compile Update="Forms\settingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

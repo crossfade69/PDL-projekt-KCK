@@ -20,14 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="loginForm.cs" />
-    <Compile Update="settingsForm.cs" />
-    <Compile Update="editprofileForm.cs" />
-    <Compile Update="inventoryForm.cs" />
-    <Compile Update="Profile.cs">
+    <Compile Update="Forms\loginForm.cs" />
+    <Compile Update="Forms\settingsForm.cs" />
+    <Compile Update="Forms\editprofileForm.cs" />
+    <Compile Update="Forms\inventoryForm.cs" />
+    <Compile Update="Forms\Items\Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Shop.cs">
+    <Compile Update="Forms\Items\Shop.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -35,7 +35,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Games.cs">
+    <Compile Update="Forms\Items\Games.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

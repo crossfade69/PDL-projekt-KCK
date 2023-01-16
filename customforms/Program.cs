@@ -11,13 +11,14 @@ namespace customforms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            loginForm loginscreen= new loginForm();
-            Application.Run(loginscreen);
-            
-            if(loginscreen.IsLogged)
-            {
-                Application.Run(new mainForm());
-            }
+            /* loginForm loginscreen= new loginForm();
+            /Application.Run(loginscreen);
+
+             if(loginscreen.IsLogged)
+             {
+                 Application.Run(new mainForm());
+             }*/
+            Application.Run(new mainForm());
         }
     }
 }
