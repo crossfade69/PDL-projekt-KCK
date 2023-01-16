@@ -24,10 +24,10 @@
     <Compile Update="Forms\settingsForm.cs" />
     <Compile Update="Forms\editprofileForm.cs" />
     <Compile Update="Forms\inventoryForm.cs" />
-    <Compile Update="Forms\Items\Profile.cs">
+    <Compile Update="Catalogs\Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\Items\Shop.cs">
+    <Compile Update="Catalogs\Shop.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -35,7 +35,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Forms\Items\Games.cs">
+    <Compile Update="Catalogs\Games.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

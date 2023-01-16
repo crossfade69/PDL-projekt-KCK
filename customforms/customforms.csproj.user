@@ -19,7 +19,7 @@
     <Compile Update="MinMaxButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Forms\Items\Friends.cs">
+    <Compile Update="Catalogs\Friends.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\settingsForm.cs">
