@@ -311,6 +311,7 @@ namespace customforms
             
                 if (reader.Read())
                 {
+                string type = (string)reader[2];
                 int userId = (int)reader[0];
                 reader.Close();
                 // Login successful

@@ -12,7 +12,8 @@ namespace customforms
     public class DataBase
     {
         private List<Game> games;
-        private  User currentUser;
+        private User currentUser;
+        public AccountType currentAccountType;
         private static SqlConnection connection;
         private string connectionString = "Server=tcp:pdl.database.windows.net,1433;" +
                "Initial Catalog=PDL;Persist Security Info=False;" +
@@ -31,7 +32,7 @@ namespace customforms
         public static SqlConnection GetConnection() { return connection; }
         public List<Game> GetAllGames()
         {
-            if(games==null)
+            if (games == null)
             {
                 games = new List<Game>();
                 string sql = "SELECT * FROM Game ";
@@ -51,8 +52,27 @@ namespace customforms
         public void LogOut()
         {
             currentUser = null;
+            currentAccountType = AccountType.normal;
         }
-        public void LogIn(User u) { currentUser = u; }
+        public void LogIn(User u, string type)
+        {
+            switch (type)
+            {
+                case "normal":
+                    currentAccountType=AccountType.normal;
+                    break;
+                case "developer":
+                    currentAccountType = AccountType.developer;
+                    break;
+                case "admin":
+                    currentAccountType = AccountType.admin;
+                    break;
+                default:
+                    break;
+            }
+
+            currentUser = u;
+        }
 
 
 
