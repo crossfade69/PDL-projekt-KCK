@@ -321,7 +321,8 @@ namespace customforms
                     command.Parameters.AddWithValue("@id",userId );
                 reader = command.ExecuteReader();
                         reader.Read();
-                MessageBox.Show((string)reader[0]);
+                
+                dataBase.LogIn(new User((string)reader[0], (string)reader[1], (string)reader[2], (DateTime)reader[4], (int)reader[5]),type);
                 reader.Close();
 
 

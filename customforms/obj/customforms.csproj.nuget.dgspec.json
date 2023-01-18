@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\customforms.csproj": {}
+    "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\customforms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\customforms.csproj": {
+    "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\customforms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
+        "projectUniqueName": "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
         "projectName": "customforms",
-        "projectPath": "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
+        "projectPath": "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
         "packagesPath": "C:\\Users\\kolo_viar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\obj\\",
+        "outputPath": "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

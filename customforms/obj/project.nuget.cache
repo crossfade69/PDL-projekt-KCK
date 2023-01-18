@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Q23pYpQKhnkSQitpPx3OkJT4YlL6EyYE3f+JN13xFWe4wFYKtOMO4e+wz1EYNR5/ttl/Vm/4p9+NUYCGbVhEQ==",
+  "dgSpecHash": "asfDLEmcoe+wOQkRd3Zo0YSqh0Wm2pNjk63jrN25gBvckY1fEtC75yKJAsbdYijuzR/5gZG3Ceeng70mSMBW6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kolo_viar\\Source\\Repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
+  "projectFilePath": "C:\\Users\\kolo_viar\\source\\repos\\PDL-projekt-KCK\\customforms\\customforms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kolo_viar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kolo_viar\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
