@@ -12,7 +12,7 @@ namespace customforms
     public class DataBase
     {
         private List<Game> games;
-        private User currentUser;
+        public User currentUser;
         public AccountType currentAccountType;
         private static SqlConnection connection;
         private string connectionString = "Server=tcp:pdl.database.windows.net,1433;" +

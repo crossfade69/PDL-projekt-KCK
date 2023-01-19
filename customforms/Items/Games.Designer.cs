@@ -66,6 +66,8 @@
             this.shownGamesListBox.Sorted = true;
             this.shownGamesListBox.TabIndex = 18;
             this.shownGamesListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.shownGamesListBox.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.shownGamesListBox_ControlAdded);
+            this.Load += new System.EventHandler(this.games_Load);
             // 
             // gamesTitleTextBox
             // 
@@ -106,6 +108,8 @@
             this.ResumeLayout(false);
 
         }
+
+
 
         #endregion
 

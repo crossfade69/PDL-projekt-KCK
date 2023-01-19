@@ -1,40 +1,73 @@
-﻿using System;
+﻿using customforms.DataDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace customforms
 {
     public partial class Games : UserControl
     {
+        DataBase dataBase;
+        List<Game> games;
         public Games()
         {
+            dataBase=DataBase.GetInstance();
             InitializeComponent();
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+        
 
-        private void listbox1_Load(object sender, EventArgs e)
-        {
-            shownGamesListBox.DataSource = GetData();
-            shownGamesListBox.DisplayMember = "Game";
-        }
         private DataTable GetData()
         {
             DataTable dtGames = new DataTable();
-
-            dtGames.Columns.Add("Game", typeof(string));
-            dtGames.Rows.Add("amogus");
-
+            dtGames.Columns.Add("title",typeof(string));
+            foreach(Game game in games) 
+            {
+                dtGames.Rows.Add(game.title);
+            }
             return dtGames;
         }
+
+        private void shownGamesListBox_ControlAdded(object sender, ControlEventArgs e)
+        {
+
+        }
+        private void games_Load(object sender, EventArgs e)
+        {
+            
+            SqlConnection connection = DataBase.GetConnection();
+
+                games = new List<Game>();
+                string sql = "select * from [dbo].[Game] where id=any(select gameId from [dbo].[GameOwner] where userId=@id) ";
+                using SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", dataBase.currentUser.id);
+            SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    games.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
+                }
+                reader.Close();
+            shownGamesListBox.DataSource = GetData();
+            shownGamesListBox.DisplayMember = "title";
+
+
+
+
+        }
     }
+    
 }
