@@ -11,7 +11,7 @@
         "projectName": "customforms",
         "projectPath": "C:\\Users\\gumif\\source\\repos\\PDL\\customforms\\customforms.csproj",
         "packagesPath": "C:\\Users\\gumif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gumif\\Source\\Repos\\PDL\\customforms\\obj\\",
+        "outputPath": "C:\\Users\\gumif\\source\\repos\\PDL\\customforms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

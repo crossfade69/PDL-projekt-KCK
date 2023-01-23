@@ -13,6 +13,7 @@ namespace customforms
     {
         private List<Game> games;
         public User currentUser;
+        public List<Game> currentUserGameList;
         public AccountType currentAccountType;
         private static SqlConnection connection;
         private string connectionString = "Server=tcp:pdl.database.windows.net,1433;" +
@@ -48,6 +49,36 @@ namespace customforms
             }
 
             return games;
+        }
+        public List<Game> GetCurrentGames() 
+        {
+            if (currentUserGameList == null)
+            {
+                currentUserGameList = new List<Game>();
+                string sql = "select * from [dbo].[Game] where id=any(select gameId from [dbo].[GameOwner] where userId=@id) ";
+                using SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", currentUser.id);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    currentUserGameList.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
+                }
+                reader.Close();
+            }
+
+            return currentUserGameList;
+        }
+        public List<User> GetCurrentFriends()
+        {
+            List<User> friends = new List<User>();
+
+
+            select* from[dbo].[User]
+            where id = (select friend1 from[dbo].[Friends] where friend2 = 1)OR id = (select friend2 from[dbo].[Friends] where friend1 = 1)
+
+            return friends;
+
         }
         public void LogOut()
         {

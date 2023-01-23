@@ -50,17 +50,8 @@ namespace customforms
             
             SqlConnection connection = DataBase.GetConnection();
 
-                games = new List<Game>();
-                string sql = "select * from [dbo].[Game] where id=any(select gameId from [dbo].[GameOwner] where userId=@id) ";
-                using SqlCommand command = new SqlCommand(sql, connection);
-                command.Parameters.AddWithValue("@id", dataBase.currentUser.id);
-            SqlDataReader reader = command.ExecuteReader();
+            games = dataBase.GetCurrentGames();
 
-                while (reader.Read())
-                {
-                    games.Add(new Game((int)reader[0], (int)reader[5], (string)reader[1], (string)reader[3], (int)reader[4]));
-                }
-                reader.Close();
             shownGamesListBox.DataSource = GetData();
             shownGamesListBox.DisplayMember = "title";
 

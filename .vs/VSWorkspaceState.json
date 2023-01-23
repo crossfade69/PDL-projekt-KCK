@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\customforms",
+    "\\customforms\\Items"
   ],
-  "SelectedNode": "\\customforms.sln",
+  "SelectedNode": "\\customforms\\Items\\Friends.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -29,12 +29,24 @@ namespace customforms
         }
         private DataTable dtGames;
         private DataBase dataBase;
+        private List<Game> games;
 
+        private int GetGameId(string gameTitle)
+        {
+            foreach(Game game in games) 
+            {
+                if(game.title==gameTitle)
+                {
+                    return game.id;
+                }
+            }
+            return -1;
+        }
         private DataTable GetData()
         {
 
             dtGames = new DataTable();
-            List<Game> games = dataBase.GetAllGames();
+             games = dataBase.GetAllGames();
             dtGames.Columns.Add("title", typeof(string));
 
             foreach (Game game in games)
@@ -67,7 +79,26 @@ namespace customforms
 
         private void shopGamesListBox_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(shopGamesListBox.SelectedIndex.ToString());
+            GameBought(shopGamesListBox.Text);
+        }
+        private void GameBought(string gameTitle)
+        {
+            bool found=false;
+            int gameId=-1;
+            foreach(Game game in dataBase.GetCurrentGames() )
+            {
+                if (game.title==gameTitle)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                MessageBox.Show("Kupiono");
+            }
+                
+            MessageBox.Show(GetGameId(gameTitle).ToString());
         }
     }
 }
