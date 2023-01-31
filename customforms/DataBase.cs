@@ -73,10 +73,6 @@ namespace customforms
         {
             List<User> friends = new List<User>();
 
-
-            select* from[dbo].[User]
-            where id = (select friend1 from[dbo].[Friends] where friend2 = 1)OR id = (select friend2 from[dbo].[Friends] where friend1 = 1)
-
             return friends;
 
         }
