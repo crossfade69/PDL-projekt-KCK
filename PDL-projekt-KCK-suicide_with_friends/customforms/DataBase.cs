@@ -148,7 +148,16 @@ namespace customforms
             currentUser = u;
         }
 
-
+        public void UpdateUserInformation(User user)
+        {
+            string sql = "UPDATE Users SET name = @name, surname = @surname, user_since = @userSince WHERE id = @userId";
+            using SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@name", user.name);
+            command.Parameters.AddWithValue("@surname", user.surname);
+            command.Parameters.AddWithValue("@userSince", user.userSince);
+            command.Parameters.AddWithValue("@userId", user.id);
+            command.ExecuteNonQuery();
+        }
 
 
     }

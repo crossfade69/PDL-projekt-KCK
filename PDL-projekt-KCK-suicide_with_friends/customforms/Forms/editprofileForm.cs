@@ -27,6 +27,9 @@ namespace customforms
         Point offset;
         Size _normalWindowSize;
         Point _normalWindowLocation = Point.Empty;
+        User currentUser;
+
+        
 
         private void uppanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -228,6 +231,9 @@ namespace customforms
         {
             isBottomPanelDragged = false;
         }
+
+        
+        
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
@@ -290,6 +296,34 @@ namespace customforms
             }
             Console.WriteLine(size); // <-- Shows file size in debugging mode.
             Console.WriteLine(result); // <-- For debugging use.
+        }
+
+        private void saveeditbutton_Click(object sender, EventArgs e)
+        {
+            User updatedUser = new User(profiletextBox.Text, realnametextBox.Text, currentUser.nick, currentUser.userSince, currentUser.id);
+            DataBase.GetInstance().UpdateUserInformation(updatedUser);
+
+            MessageBox.Show("Profile data saved successfully.");
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profiletextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void realnametextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paswrdBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

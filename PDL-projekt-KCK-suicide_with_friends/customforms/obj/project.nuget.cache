@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8xm9CzmkVEziB1UWyCll+zqW1UwkEgAuyvhJOe1r/YKS7zTwpaKzPZb4rPMb3bLZD0Y4KdEos6/jvplT/kS81g==",
+  "dgSpecHash": "pvlh+MC2BR/h2mD35wAgNEHIT0vVoEiAVpZ7mCtIdvnGlNb04s27HTkSIZ7L5TbBVazxYm6UIRDoDrWKYz/B5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrcro\\Desktop\\PDL-projekt-KCK-suicide\\customforms\\customforms.csproj",
+  "projectFilePath": "C:\\Users\\mrcro\\Desktop\\PDL-projekt-KCK\\PDL-projekt-KCK-suicide_with_friends\\customforms\\customforms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrcro\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mrcro\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

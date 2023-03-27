@@ -36,6 +36,77 @@ namespace customforms
         {
 
         }
+        public void ChangeName(string newName)
+        {
+            if (!string.IsNullOrEmpty(newName))
+            {
+                name = newName;
+            }
+        }
+
+        public void ChangeSurname(string newSurname)
+        {
+            if (!string.IsNullOrEmpty(newSurname))
+            {
+                surname = newSurname;
+            }
+        }
+
+        public void ChangeNick(string newNick)
+        {
+            if (!string.IsNullOrEmpty(newNick))
+            {
+                nick = newNick;
+            }
+        }
+
+        public void AddFriend(int friendId)
+        {
+            if (!friendsId.Contains(friendId))
+            {
+                friendsId.Add(friendId);
+            }
+        }
+
+        public void RemoveFriend(int friendId)
+        {
+            if (friendsId.Contains(friendId))
+            {
+                friendsId.Remove(friendId);
+            }
+        }
+
+        public void AddOwnedGame(int gameId)
+        {
+            if (!ownedGameId.Contains(gameId))
+            {
+                ownedGameId.Add(gameId);
+            }
+        }
+
+        public void RemoveOwnedGame(int gameId)
+        {
+            if (ownedGameId.Contains(gameId))
+            {
+                ownedGameId.Remove(gameId);
+            }
+        }
+
+        public void AddOwnedItem(int itemId)
+        {
+            if (!ownedItemsId.Contains(itemId))
+            {
+                ownedItemsId.Add(itemId);
+            }
+        }
+
+        public void RemoveOwnedItem(int itemId)
+        {
+            if (ownedItemsId.Contains(itemId))
+            {
+                ownedItemsId.Remove(itemId);
+            }
+        }
 
 
 

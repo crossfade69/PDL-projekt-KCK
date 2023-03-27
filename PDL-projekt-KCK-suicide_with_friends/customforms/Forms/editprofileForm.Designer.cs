@@ -36,6 +36,10 @@
             this.uppanel = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.paswrdBox1 = new System.Windows.Forms.TextBox();
+            this.profinfolabel = new System.Windows.Forms.Label();
+            this.profinfotextBox = new System.Windows.Forms.TextBox();
             this.citytextBox = new System.Windows.Forms.TextBox();
             this.countrytextBox = new System.Windows.Forms.TextBox();
             this.citylabel = new System.Windows.Forms.Label();
@@ -53,8 +57,6 @@
             this.max = new customforms.MinMaxButton();
             this.min = new customforms.ButtonZ();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.profinfotextBox = new System.Windows.Forms.TextBox();
-            this.profinfolabel = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.labelpanel.SuspendLayout();
@@ -131,6 +133,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.paswrdBox1);
             this.panel1.Controls.Add(this.profinfolabel);
             this.panel1.Controls.Add(this.profinfotextBox);
             this.panel1.Controls.Add(this.citytextBox);
@@ -146,19 +150,56 @@
             this.panel1.Controls.Add(this.saveeditbutton);
             this.panel1.Location = new System.Drawing.Point(8, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(639, 379);
+            this.panel1.Size = new System.Drawing.Size(639, 386);
             this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(204, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Password";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // paswrdBox1
+            // 
+            this.paswrdBox1.Location = new System.Drawing.Point(278, 95);
+            this.paswrdBox1.Name = "paswrdBox1";
+            this.paswrdBox1.Size = new System.Drawing.Size(332, 27);
+            this.paswrdBox1.TabIndex = 33;
+            this.paswrdBox1.TextChanged += new System.EventHandler(this.paswrdBox1_TextChanged);
+            // 
+            // profinfolabel
+            // 
+            this.profinfolabel.AutoSize = true;
+            this.profinfolabel.ForeColor = System.Drawing.Color.White;
+            this.profinfolabel.Location = new System.Drawing.Point(190, 242);
+            this.profinfolabel.Name = "profinfolabel";
+            this.profinfolabel.Size = new System.Drawing.Size(82, 20);
+            this.profinfolabel.TabIndex = 32;
+            this.profinfolabel.Text = "Profile Info";
+            // 
+            // profinfotextBox
+            // 
+            this.profinfotextBox.Location = new System.Drawing.Point(278, 242);
+            this.profinfotextBox.Multiline = true;
+            this.profinfotextBox.Name = "profinfotextBox";
+            this.profinfotextBox.Size = new System.Drawing.Size(332, 63);
+            this.profinfotextBox.TabIndex = 31;
             // 
             // citytextBox
             // 
-            this.citytextBox.Location = new System.Drawing.Point(278, 128);
+            this.citytextBox.Location = new System.Drawing.Point(278, 172);
             this.citytextBox.Name = "citytextBox";
             this.citytextBox.Size = new System.Drawing.Size(332, 27);
             this.citytextBox.TabIndex = 30;
             // 
             // countrytextBox
             // 
-            this.countrytextBox.Location = new System.Drawing.Point(278, 95);
+            this.countrytextBox.Location = new System.Drawing.Point(278, 139);
             this.countrytextBox.Name = "countrytextBox";
             this.countrytextBox.Size = new System.Drawing.Size(332, 27);
             this.countrytextBox.TabIndex = 29;
@@ -167,7 +208,7 @@
             // 
             this.citylabel.AutoSize = true;
             this.citylabel.ForeColor = System.Drawing.Color.White;
-            this.citylabel.Location = new System.Drawing.Point(238, 131);
+            this.citylabel.Location = new System.Drawing.Point(238, 175);
             this.citylabel.Name = "citylabel";
             this.citylabel.Size = new System.Drawing.Size(34, 20);
             this.citylabel.TabIndex = 28;
@@ -177,7 +218,7 @@
             // 
             this.profphotolabel.AutoSize = true;
             this.profphotolabel.ForeColor = System.Drawing.Color.White;
-            this.profphotolabel.Location = new System.Drawing.Point(179, 165);
+            this.profphotolabel.Location = new System.Drawing.Point(179, 209);
             this.profphotolabel.Name = "profphotolabel";
             this.profphotolabel.Size = new System.Drawing.Size(95, 20);
             this.profphotolabel.TabIndex = 26;
@@ -187,7 +228,7 @@
             // 
             this.countrylabel.AutoSize = true;
             this.countrylabel.ForeColor = System.Drawing.Color.White;
-            this.countrylabel.Location = new System.Drawing.Point(212, 98);
+            this.countrylabel.Location = new System.Drawing.Point(212, 142);
             this.countrylabel.Name = "countrylabel";
             this.countrylabel.Size = new System.Drawing.Size(60, 20);
             this.countrylabel.TabIndex = 25;
@@ -215,7 +256,7 @@
             // 
             // chooseFilebutton
             // 
-            this.chooseFilebutton.Location = new System.Drawing.Point(278, 161);
+            this.chooseFilebutton.Location = new System.Drawing.Point(278, 205);
             this.chooseFilebutton.Name = "chooseFilebutton";
             this.chooseFilebutton.Size = new System.Drawing.Size(332, 29);
             this.chooseFilebutton.TabIndex = 22;
@@ -229,6 +270,7 @@
             this.realnametextBox.Name = "realnametextBox";
             this.realnametextBox.Size = new System.Drawing.Size(332, 27);
             this.realnametextBox.TabIndex = 20;
+            this.realnametextBox.TextChanged += new System.EventHandler(this.realnametextBox_TextChanged);
             // 
             // profiletextBox
             // 
@@ -236,6 +278,7 @@
             this.profiletextBox.Name = "profiletextBox";
             this.profiletextBox.Size = new System.Drawing.Size(332, 27);
             this.profiletextBox.TabIndex = 19;
+            this.profiletextBox.TextChanged += new System.EventHandler(this.profiletextBox_TextChanged);
             // 
             // saveeditbutton
             // 
@@ -252,6 +295,7 @@
             this.saveeditbutton.Text = "Save";
             this.saveeditbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.saveeditbutton.UseVisualStyleBackColor = false;
+            this.saveeditbutton.Click += new System.EventHandler(this.saveeditbutton_Click);
             // 
             // labelpanel
             // 
@@ -344,24 +388,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // profinfotextBox
-            // 
-            this.profinfotextBox.Location = new System.Drawing.Point(278, 196);
-            this.profinfotextBox.Multiline = true;
-            this.profinfotextBox.Name = "profinfotextBox";
-            this.profinfotextBox.Size = new System.Drawing.Size(332, 100);
-            this.profinfotextBox.TabIndex = 31;
-            // 
-            // profinfolabel
-            // 
-            this.profinfolabel.AutoSize = true;
-            this.profinfolabel.ForeColor = System.Drawing.Color.White;
-            this.profinfolabel.Location = new System.Drawing.Point(190, 196);
-            this.profinfolabel.Name = "profinfolabel";
-            this.profinfolabel.Size = new System.Drawing.Size(82, 20);
-            this.profinfolabel.TabIndex = 32;
-            this.profinfolabel.Text = "Profile Info";
-            // 
             // editprofileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -413,5 +439,7 @@
         private Label editscreenlabel;
         private TextBox profinfotextBox;
         private Label profinfolabel;
+        private Label label1;
+        private TextBox paswrdBox1;
     }
 }

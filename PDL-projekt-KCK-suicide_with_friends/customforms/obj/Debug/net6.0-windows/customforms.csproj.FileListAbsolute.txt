@@ -272,3 +272,7 @@ C:\Users\kolo_viar\Source\Repos\PDL-projekt-KCK\customforms\obj\Debug\net6.0-win
 C:\Users\kolo_viar\Source\Repos\PDL-projekt-KCK\customforms\obj\Debug\net6.0-windows\customforms.pdb
 C:\Users\kolo_viar\Source\Repos\PDL-projekt-KCK\customforms\obj\Debug\net6.0-windows\customforms.genruntimeconfig.cache
 C:\Users\kolo_viar\Source\Repos\PDL-projekt-KCK\customforms\obj\Debug\net6.0-windows\ref\customforms.dll
+C:\Users\mrcro\Desktop\PDL-projekt-KCK\PDL-projekt-KCK-suicide_with_friends\customforms\obj\Debug\net6.0-windows\customforms.csproj.AssemblyReference.cache
+C:\Users\mrcro\Desktop\PDL-projekt-KCK\PDL-projekt-KCK-suicide_with_friends\customforms\obj\Debug\net6.0-windows\customforms.dll
+C:\Users\mrcro\Desktop\PDL-projekt-KCK\PDL-projekt-KCK-suicide_with_friends\customforms\obj\Debug\net6.0-windows\refint\customforms.dll
+C:\Users\mrcro\Desktop\PDL-projekt-KCK\PDL-projekt-KCK-suicide_with_friends\customforms\obj\Debug\net6.0-windows\customforms.pdb
