@@ -57,9 +57,10 @@
             this.downpanel.BackColor = System.Drawing.Color.Lavender;
             this.downpanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.downpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.downpanel.Location = new System.Drawing.Point(0, 235);
+            this.downpanel.Location = new System.Drawing.Point(0, 176);
+            this.downpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downpanel.Name = "downpanel";
-            this.downpanel.Size = new System.Drawing.Size(485, 3);
+            this.downpanel.Size = new System.Drawing.Size(424, 2);
             this.downpanel.TabIndex = 0;
             this.downpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.downpanel_MouseDown);
             this.downpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.downpanel_MouseMove);
@@ -70,9 +71,10 @@
             this.rightpanel.BackColor = System.Drawing.Color.Lavender;
             this.rightpanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.rightpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightpanel.Location = new System.Drawing.Point(483, 0);
+            this.rightpanel.Location = new System.Drawing.Point(422, 0);
+            this.rightpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rightpanel.Name = "rightpanel";
-            this.rightpanel.Size = new System.Drawing.Size(2, 235);
+            this.rightpanel.Size = new System.Drawing.Size(2, 176);
             this.rightpanel.TabIndex = 2;
             this.rightpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rightpanel_MouseDown);
             this.rightpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rightpanel_MouseMove);
@@ -84,8 +86,9 @@
             this.leftpanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpanel.Location = new System.Drawing.Point(0, 0);
+            this.leftpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(2, 235);
+            this.leftpanel.Size = new System.Drawing.Size(2, 176);
             this.leftpanel.TabIndex = 3;
             this.leftpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.leftpanel_MouseDown);
             this.leftpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftpanel_MouseMove);
@@ -97,8 +100,9 @@
             this.uppanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.uppanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uppanel.Location = new System.Drawing.Point(0, 0);
+            this.uppanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uppanel.Name = "uppanel";
-            this.uppanel.Size = new System.Drawing.Size(485, 3);
+            this.uppanel.Size = new System.Drawing.Size(424, 2);
             this.uppanel.TabIndex = 1;
             this.uppanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.uppanel_MouseDown);
             this.uppanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.uppanel_MouseMove);
@@ -113,8 +117,9 @@
             this.panel.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(485, 235);
+            this.panel.Size = new System.Drawing.Size(424, 176);
             this.panel.TabIndex = 1;
             // 
             // panel1
@@ -128,18 +133,19 @@
             this.panel1.Controls.Add(this.passwordtextBox);
             this.panel1.Controls.Add(this.profiletextBox);
             this.panel1.Controls.Add(this.loginbutton);
-            this.panel1.Location = new System.Drawing.Point(8, 56);
+            this.panel1.Location = new System.Drawing.Point(7, 42);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 170);
+            this.panel1.Size = new System.Drawing.Size(410, 128);
             this.panel1.TabIndex = 6;
             // 
             // passwordlabel
             // 
             this.passwordlabel.AutoSize = true;
             this.passwordlabel.ForeColor = System.Drawing.Color.White;
-            this.passwordlabel.Location = new System.Drawing.Point(41, 65);
+            this.passwordlabel.Location = new System.Drawing.Point(36, 49);
             this.passwordlabel.Name = "passwordlabel";
-            this.passwordlabel.Size = new System.Drawing.Size(70, 20);
+            this.passwordlabel.Size = new System.Drawing.Size(57, 15);
             this.passwordlabel.TabIndex = 24;
             this.passwordlabel.Text = "Password";
             // 
@@ -147,25 +153,27 @@
             // 
             this.enterprofnamelabel.AutoSize = true;
             this.enterprofnamelabel.ForeColor = System.Drawing.Color.White;
-            this.enterprofnamelabel.Location = new System.Drawing.Point(15, 29);
+            this.enterprofnamelabel.Location = new System.Drawing.Point(13, 22);
             this.enterprofnamelabel.Name = "enterprofnamelabel";
-            this.enterprofnamelabel.Size = new System.Drawing.Size(96, 20);
+            this.enterprofnamelabel.Size = new System.Drawing.Size(76, 15);
             this.enterprofnamelabel.TabIndex = 23;
             this.enterprofnamelabel.Text = "Profile Name";
             // 
             // passwordtextBox
             // 
-            this.passwordtextBox.Location = new System.Drawing.Point(117, 62);
+            this.passwordtextBox.Location = new System.Drawing.Point(102, 46);
+            this.passwordtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordtextBox.Name = "passwordtextBox";
-            this.passwordtextBox.Size = new System.Drawing.Size(332, 27);
-            this.passwordtextBox.TabIndex = 20;
+            this.passwordtextBox.Size = new System.Drawing.Size(291, 23);
+            this.passwordtextBox.TabIndex = 1;
             // 
             // profiletextBox
             // 
-            this.profiletextBox.Location = new System.Drawing.Point(117, 26);
+            this.profiletextBox.Location = new System.Drawing.Point(102, 20);
+            this.profiletextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.profiletextBox.Name = "profiletextBox";
-            this.profiletextBox.Size = new System.Drawing.Size(332, 27);
-            this.profiletextBox.TabIndex = 19;
+            this.profiletextBox.Size = new System.Drawing.Size(291, 23);
+            this.profiletextBox.TabIndex = 0;
             // 
             // loginbutton
             // 
@@ -175,10 +183,11 @@
             this.loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.loginbutton.ForeColor = System.Drawing.Color.White;
-            this.loginbutton.Location = new System.Drawing.Point(187, 107);
+            this.loginbutton.Location = new System.Drawing.Point(164, 80);
+            this.loginbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginbutton.Name = "loginbutton";
-            this.loginbutton.Size = new System.Drawing.Size(99, 36);
-            this.loginbutton.TabIndex = 18;
+            this.loginbutton.Size = new System.Drawing.Size(87, 27);
+            this.loginbutton.TabIndex = 2;
             this.loginbutton.Text = "Login";
             this.loginbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.loginbutton.UseVisualStyleBackColor = false;
@@ -192,9 +201,10 @@
             this.labelpanel.Controls.Add(this.max);
             this.labelpanel.Controls.Add(this.min);
             this.labelpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelpanel.Location = new System.Drawing.Point(0, 3);
+            this.labelpanel.Location = new System.Drawing.Point(0, 2);
+            this.labelpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelpanel.Name = "labelpanel";
-            this.labelpanel.Size = new System.Drawing.Size(485, 47);
+            this.labelpanel.Size = new System.Drawing.Size(424, 35);
             this.labelpanel.TabIndex = 5;
             this.labelpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelpanel_MouseDown);
             this.labelpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelpanel_MouseMove);
@@ -204,11 +214,12 @@
             // 
             this.loginscreenlabel.AutoSize = true;
             this.loginscreenlabel.ForeColor = System.Drawing.Color.White;
-            this.loginscreenlabel.Location = new System.Drawing.Point(8, 13);
+            this.loginscreenlabel.Location = new System.Drawing.Point(7, 10);
             this.loginscreenlabel.Name = "loginscreenlabel";
-            this.loginscreenlabel.Size = new System.Drawing.Size(80, 20);
+            this.loginscreenlabel.Size = new System.Drawing.Size(64, 15);
             this.loginscreenlabel.TabIndex = 24;
             this.loginscreenlabel.Text = "Logging In";
+            this.loginscreenlabel.Click += new System.EventHandler(this.loginscreenlabel_Click);
             // 
             // close
             // 
@@ -218,12 +229,13 @@
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.close.ForeColor = System.Drawing.Color.White;
-            this.close.Location = new System.Drawing.Point(440, -1);
+            this.close.Location = new System.Drawing.Point(385, -1);
+            this.close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.close.MouseClickColor1 = System.Drawing.Color.Tomato;
             this.close.MouseHoverColor = System.Drawing.Color.Salmon;
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(40, 50);
-            this.close.TabIndex = 7;
+            this.close.Size = new System.Drawing.Size(35, 38);
+            this.close.TabIndex = 5;
             this.close.Text = "X";
             this.close.TextLocation_X = 10;
             this.close.TextLocation_Y = 12;
@@ -239,12 +251,13 @@
             this.max.DisplayText = "_";
             this.max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.max.ForeColor = System.Drawing.Color.White;
-            this.max.Location = new System.Drawing.Point(399, -2);
+            this.max.Location = new System.Drawing.Point(349, -2);
+            this.max.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.max.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
             this.max.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(240)))));
             this.max.Name = "max";
-            this.max.Size = new System.Drawing.Size(40, 50);
-            this.max.TabIndex = 6;
+            this.max.Size = new System.Drawing.Size(35, 38);
+            this.max.TabIndex = 4;
             this.max.Text = "minMaxButton1";
             this.max.TextLocation_X = 13;
             this.max.TextLocation_Y = 21;
@@ -259,12 +272,13 @@
             this.min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.min.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.min.ForeColor = System.Drawing.Color.White;
-            this.min.Location = new System.Drawing.Point(358, -1);
+            this.min.Location = new System.Drawing.Point(313, -1);
+            this.min.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.min.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
             this.min.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(240)))));
             this.min.Name = "min";
-            this.min.Size = new System.Drawing.Size(40, 50);
-            this.min.TabIndex = 4;
+            this.min.Size = new System.Drawing.Size(35, 38);
+            this.min.TabIndex = 3;
             this.min.Text = "_";
             this.min.TextLocation_X = 6;
             this.min.TextLocation_Y = -16;
@@ -277,18 +291,20 @@
             // 
             // loginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(485, 238);
+            this.ClientSize = new System.Drawing.Size(424, 178);
             this.ControlBox = false;
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.rightpanel);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.downpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "loginForm";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginForm_KeyDown);
             this.panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

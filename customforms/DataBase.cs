@@ -50,7 +50,7 @@ namespace customforms
 
             return games;
         }
-        public List<Game> GetCurrentGames() 
+        public List<Game> GetCurrentGames()
         {
             if (currentUserGameList == null)
             {
@@ -86,7 +86,7 @@ namespace customforms
             switch (type)
             {
                 case "normal":
-                    currentAccountType=AccountType.normal;
+                    currentAccountType = AccountType.normal;
                     break;
                 case "developer":
                     currentAccountType = AccountType.developer;

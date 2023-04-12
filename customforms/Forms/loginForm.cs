@@ -1,14 +1,4 @@
- using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace customforms
 {
@@ -298,44 +288,60 @@ namespace customforms
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
+
+            LogIn();
+        }
+        private void LogIn()
+        {
             string username = profiletextBox.Text;
             string password = passwordtextBox.Text;
-            SqlConnection connection=DataBase.GetConnection();
+            SqlConnection connection = DataBase.GetConnection();
             string sql = "SELECT * FROM Accounts WHERE login = @login AND password=@password ";
-             SqlCommand command = new SqlCommand(sql, connection);
+            SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@login", username);
             command.Parameters.AddWithValue("@password", password);
 
 
             SqlDataReader reader = command.ExecuteReader();
-            
-                if (reader.Read())
-                {
+
+            if (reader.Read())
+            {
                 string type = (string)reader[2];
                 int userId = (int)reader[0];
                 reader.Close();
                 // Login successful
                 IsLogged = true;
-                     sql = "SELECT * FROM [dbo].[User] WHERE id=@id";
-                     command = new SqlCommand(sql, connection);
-                    command.Parameters.AddWithValue("@id",userId );
+                sql = "SELECT * FROM [dbo].[User] WHERE id=@id";
+                command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", userId);
                 reader = command.ExecuteReader();
-                        reader.Read();
-                
-                dataBase.LogIn(new User((string)reader[0], (string)reader[1], (string)reader[2], (DateTime)reader[4], (int)reader[5]),type);
+                reader.Read();
+
+                dataBase.LogIn(new User((string)reader[0], (string)reader[1], (string)reader[2], (DateTime)reader[4], (int)reader[5]), type);
                 reader.Close();
 
 
                 this.Close();
-                }
-                else
-                {
-                    // Login failed
-                    MessageBox.Show("Invalid username or password.");
-                    profiletextBox.Clear();
-                    passwordtextBox.Clear();
-                }
-            
-        }  
+            }
+            else
+            {
+                // Login failed
+                MessageBox.Show("Invalid username or password.");
+                profiletextBox.Clear();
+                passwordtextBox.Clear();
+            }
+        }
+
+
+        private void loginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                LogIn();
+        }
+
+        private void loginscreenlabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
