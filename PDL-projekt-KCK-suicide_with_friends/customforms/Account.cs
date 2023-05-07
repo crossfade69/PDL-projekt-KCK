@@ -82,32 +82,7 @@ namespace customforms
                 }
             }
         }
-    }
-    public class AccountMap : IEntityTypeConfiguration<Account>
-    {
-        public void Configure(EntityTypeBuilder<Account> builder)
-        {
-            builder.ToTable("Accounts");
-            builder.HasKey(a => a.id);
-
-            builder.Property(a => a.nick).IsRequired().HasMaxLength(50);
-            builder.Property(a => a.email).IsRequired().HasMaxLength(50);
-            builder.Property(a => a.password).IsRequired().HasMaxLength(50);
-            builder.Property(a => a.typeOfUser).IsRequired().HasMaxLength(50);
-            builder.Property(a => a.id).ValueGeneratedOnAdd();
-            builder.Property(a => a.image).IsRequired();
-        }
-    }
-    public class MyDbContext : DbContext
-    {
-        public DbSet<Account> Accounts { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new AccountMap());
-        }
-    }
-    public void DownloadFileFromDatabase(string connectionString, string tableName, string fileNameColumn, string idColumn, int idValue, string localFilePath)
+        public void DBDownload(string connectionString, string tableName, string fileNameColumn, string idColumn, int idValue, string localFilePath)
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
@@ -145,6 +120,31 @@ namespace customforms
                     }
                 }
             }
+        }
+    }
+    }
+    public class AccountMap : IEntityTypeConfiguration<Account>
+    {
+        public void Configure(EntityTypeBuilder<Account> builder)
+        {
+            builder.ToTable("Accounts");
+            builder.HasKey(a => a.id);
+
+            builder.Property(a => a.nick).IsRequired().HasMaxLength(50);
+            builder.Property(a => a.email).IsRequired().HasMaxLength(50);
+            builder.Property(a => a.password).IsRequired().HasMaxLength(50);
+            builder.Property(a => a.typeOfUser).IsRequired().HasMaxLength(50);
+            builder.Property(a => a.id).ValueGeneratedOnAdd();
+            builder.Property(a => a.image).IsRequired();
+        }
+    }
+    public class MyDbContext : DbContext
+    {
+        public DbSet<Account> Accounts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AccountMap());
         }
     }
 }
