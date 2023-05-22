@@ -28,85 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.shownGamesListBox = new System.Windows.Forms.ListBox();
-            this.gamesTitleTextBox = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel2 = new Panel();
+            button_directory = new Button();
+            shownGamesListBox = new ListBox();
+            gamesTitleTextBox = new Label();
+            panel1 = new Panel();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel2.Controls.Add(this.shownGamesListBox);
-            this.panel2.Controls.Add(this.gamesTitleTextBox);
-            this.panel2.Location = new System.Drawing.Point(17, 13);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 375);
-            this.panel2.TabIndex = 17;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.BackColor = SystemColors.WindowFrame;
+            panel2.Controls.Add(button_directory);
+            panel2.Controls.Add(shownGamesListBox);
+            panel2.Controls.Add(gamesTitleTextBox);
+            panel2.Location = new Point(17, 13);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1200, 375);
+            panel2.TabIndex = 17;
+            // 
+            // button_directory
+            // 
+            button_directory.Location = new Point(169, 26);
+            button_directory.Name = "button_directory";
+            button_directory.Size = new Size(75, 23);
+            button_directory.TabIndex = 19;
+            button_directory.Text = "Select Directory";
+            button_directory.UseVisualStyleBackColor = true;
+            button_directory.Click += button1_Click;
             // 
             // shownGamesListBox
             // 
-            this.shownGamesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.shownGamesListBox.BackColor = System.Drawing.Color.Thistle;
-            this.shownGamesListBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.shownGamesListBox.FormattingEnabled = true;
-            this.shownGamesListBox.ItemHeight = 36;
-            this.shownGamesListBox.Location = new System.Drawing.Point(21, 50);
-            this.shownGamesListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.shownGamesListBox.Name = "shownGamesListBox";
-            this.shownGamesListBox.Size = new System.Drawing.Size(1162, 292);
-            this.shownGamesListBox.Sorted = true;
-            this.shownGamesListBox.TabIndex = 18;
-            this.shownGamesListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            this.shownGamesListBox.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.shownGamesListBox_ControlAdded);
-            this.Load += new System.EventHandler(this.games_Load);
+            shownGamesListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            shownGamesListBox.BackColor = Color.Thistle;
+            shownGamesListBox.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
+            shownGamesListBox.FormattingEnabled = true;
+            shownGamesListBox.ItemHeight = 36;
+            shownGamesListBox.Location = new Point(21, 50);
+            shownGamesListBox.Margin = new Padding(3, 2, 3, 2);
+            shownGamesListBox.Name = "shownGamesListBox";
+            shownGamesListBox.Size = new Size(1162, 292);
+            shownGamesListBox.Sorted = true;
+            shownGamesListBox.TabIndex = 18;
+            shownGamesListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            shownGamesListBox.ControlAdded += shownGamesListBox_ControlAdded;
+            shownGamesListBox.MouseDoubleClick += shownGamesListBox_MouseDoubleClick;
             // 
             // gamesTitleTextBox
             // 
-            this.gamesTitleTextBox.AutoSize = true;
-            this.gamesTitleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gamesTitleTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gamesTitleTextBox.ForeColor = System.Drawing.Color.White;
-            this.gamesTitleTextBox.Location = new System.Drawing.Point(21, 16);
-            this.gamesTitleTextBox.Name = "gamesTitleTextBox";
-            this.gamesTitleTextBox.Size = new System.Drawing.Size(142, 34);
-            this.gamesTitleTextBox.TabIndex = 17;
-            this.gamesTitleTextBox.Text = "Your Games";
+            gamesTitleTextBox.AutoSize = true;
+            gamesTitleTextBox.BorderStyle = BorderStyle.Fixed3D;
+            gamesTitleTextBox.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            gamesTitleTextBox.ForeColor = Color.White;
+            gamesTitleTextBox.Location = new Point(21, 16);
+            gamesTitleTextBox.Name = "gamesTitleTextBox";
+            gamesTitleTextBox.Size = new Size(142, 34);
+            gamesTitleTextBox.TabIndex = 17;
+            gamesTitleTextBox.Text = "Your Games";
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 400);
-            this.panel1.TabIndex = 18;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.MediumPurple;
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1234, 400);
+            panel1.TabIndex = 18;
             // 
             // Games
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Games";
-            this.Size = new System.Drawing.Size(1234, 400);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Games";
+            Size = new Size(1234, 400);
+            Load += games_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
 
@@ -117,5 +123,6 @@
         private Panel panel1;
         private Label gamesTitleTextBox;
         public ListBox shownGamesListBox;
+        private Button button_directory;
     }
 }
