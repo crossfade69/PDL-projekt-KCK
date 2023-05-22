@@ -16,11 +16,22 @@ namespace customforms
         public string description;
         public void PublishGame(Game game)
         {
-
+            if (!publishedGames.Contains(game.id))
+            {
+                publishedGames.Add(game.id);
+                Console.WriteLine($"Game with ID {game.id} published successfully.");
+            }
+            else Console.WriteLine($"Game with ID {game.id} is already published.");
         }
+
         public void DeleteGame(int id)
         {
-
+            if (publishedGames.Contains(id))
+            {
+                publishedGames.Remove(id);
+                Console.WriteLine($"Game with ID {id} deleted successfully.");
+            }
+            else Console.WriteLine($"Game with ID {id} is not found.");
         }
     }
     public class ProducerMap : IEntityTypeConfiguration<Producer>

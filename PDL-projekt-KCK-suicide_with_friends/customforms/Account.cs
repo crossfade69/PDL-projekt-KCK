@@ -83,45 +83,45 @@ namespace customforms
             }
         }
         public void DBDownload(string connectionString, string tableName, string fileNameColumn, string idColumn, int idValue, string localFilePath)
-    {
-        using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            connection.Open();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {   
+                connection.Open();
 
-            // Zapytanie SQL pobierające nazwę pliku
-            string query = $"SELECT {fileNameColumn} FROM {tableName} WHERE {idColumn} = @idValue";
+                // Zapytanie SQL pobierające nazwę pliku
+                string query = $"SELECT {fileNameColumn} FROM {tableName} WHERE {idColumn} = @idValue";
 
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                // Ustawienie wartości parametru w zapytaniu SQL
-                command.Parameters.AddWithValue("@idValue", idValue);
-
-                // Wykonanie zapytania i pobranie wyniku
-                string fileName = (string)command.ExecuteScalar();
-
-                // Pobranie strumienia z plikiem z bazy danych
-                using (SqlCommand fileCommand = new SqlCommand($"SELECT Data FROM {tableName} WHERE {idColumn} = @idValue", connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     // Ustawienie wartości parametru w zapytaniu SQL
-                    fileCommand.Parameters.AddWithValue("@idValue", idValue);
+                    command.Parameters.AddWithValue("@idValue", idValue);
+
+                    // Wykonanie zapytania i pobranie wyniku
+                    string fileName = (string)command.ExecuteScalar();
 
                     // Pobranie strumienia z plikiem z bazy danych
-                    using (SqlDataReader reader = fileCommand.ExecuteReader())
+                    using (SqlCommand fileCommand = new SqlCommand($"SELECT Data FROM {tableName} WHERE {idColumn} = @idValue", connection))
                     {
-                        if (reader.Read())
+                        // Ustawienie wartości parametru w zapytaniu SQL
+                        fileCommand.Parameters.AddWithValue("@idValue", idValue);
+
+                        // Pobranie strumienia z plikiem z bazy danych
+                        using (SqlDataReader reader = fileCommand.ExecuteReader())
                         {
-                            // Zapisanie strumienia do pliku na dysku twardym
-                            using (FileStream fileStream = new FileStream(localFilePath, FileMode.Create))
+                            if (reader.Read())
                             {
-                                byte[] buffer = (byte[])reader["Data"];
-                                fileStream.Write(buffer, 0, buffer.Length);
+                                // Zapisanie strumienia do pliku na dysku twardym
+                                using (FileStream fileStream = new FileStream(localFilePath, FileMode.Create))
+                                {
+                                    byte[] buffer = (byte[])reader["Data"];
+                                    fileStream.Write(buffer, 0, buffer.Length);
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
     }
     public class AccountMap : IEntityTypeConfiguration<Account>
     {

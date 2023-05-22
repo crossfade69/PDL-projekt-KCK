@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace customforms
 {
@@ -20,6 +20,7 @@ namespace customforms
         public List<int> ownedGameId;
         public List<int> ownedItemsId;
         public DateTime userSince;
+        public List<Review> reviews;
         public User(string nick,string name,string surname,DateTime userSince,int id)
         {
             this.nick = nick;
@@ -28,14 +29,18 @@ namespace customforms
             this.userSince = userSince;
             this.id = id;
         }
-        public void PostReviews(Review review)
+        public void PostReview(Review review)
         {
-
+            if (!reviews.Contains(review))
+                reviews.Add(review);
         }
-        public void DeleteItem()
+
+        public void DeleteReview(Review review)
         {
-
+            if (reviews.Contains(review))
+                reviews.Remove(review);
         }
+
         public void ChangeName(string newName)
         {
             if (!string.IsNullOrEmpty(newName))
